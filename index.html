@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plasmatic — Plasma Network Tools</title>
+  <meta name="description" content="Plasmatic adalah portal utama ekosistem Plasma Network: token factory, token locker, vesting, dan tool on-chain lainnya.">
+  <meta property="og:title" content="Plasmatic — Plasma Network Tools">
+  <meta property="og:description" content="Satu pintu untuk membuat & mengelola token di Plasma Network.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og-cover.png">
+  <meta name="theme-color" content="#00ff85">
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container row between center">
+      <div class="row center logo-wrap">
+        <img src="assets/logo.svg" class="logo" alt="Plasmatic logo" width="28" height="28">
+        <strong class="brand">Plasmatic</strong>
+        <span class="badge">Main Site</span>
+      </div>
+
+      <nav class="nav">
+        <a href="#features">Fitur</a>
+        <a href="#solutions">Solusi</a>
+        <a href="docs/" rel="nofollow">Docs</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="row gap-sm">
+        <a class="btn ghost" href="#status" id="status-pill">
+          <span class="dot dot-ok"></span><span>Status: Normal</span>
+        </a>
+        <a class="btn solid" href="https://app.plasmatic.to" target="_blank" rel="noopener">Launch App</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Bangun & kelola token di <span class="accent">Plasma Network</span></h1>
+          <p class="lede">Plasmatic adalah portal utama untuk <b>Token Factory</b>, <b>Token Locker</b>, <b>Liquidity Lock</b>, <b>Vesting</b>, dan utilitas on-chain lain. Desain ringan, siap dijadikan <i>web app</i> terpisah.</p>
+          <div class="cta row">
+            <a class="btn solid lg" href="https://app.plasmatic.to" target="_blank" rel="noopener">Launch App</a>
+            <a class="btn outline lg" href="docs/">Lihat Docs</a>
+          </div>
+          <ul class="ticks">
+            <li>UI terang dengan aksen plasma hijau</li>
+            <li>Header top: network, balance, wallet (di App)</li>
+            <li>Sidebar di App; situs ini adalah portal utama</li>
+          </ul>
+        </div>
+
+        <div class="hero-card glass">
+          <div class="card-header row between center">
+            <span class="chip">Preview</span>
+            <span class="pill">Plasma Mainnet</span>
+          </div>
+          <div class="card-body">
+<pre><code>// Plasmatic SDK (pseudo)
+const tx = await plasmatic.tokenFactory.create({
+  name: "PLAS",
+  symbol: "PLS",
+  supply: "1_000_000",
+  owner: wallet.address
+})
+await plasmatic.verify.onExplorer(tx.contract)</code></pre>
+          </div>
+          <div class="card-footer row between center">
+            <div class="row center gap-xs">
+              <span class="dot dot-ok"></span>
+              <span class="muted">Explorer verification ready</span>
+            </div>
+            <button class="btn ghost sm" disabled>Connect Wallet</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <h2>Fitur Utama</h2>
+        <div class="grid-3">
+          <article class="feature">
+            <div class="icon"></div>
+            <h3>Create Token</h3>
+            <p>Buat token standar dengan satu klik. Dukungan metadata, initial supply, dan fee routing.</p>
+          </article>
+          <article class="feature">
+            <div class="icon"></div>
+            <h3>Token Locker</h3>
+            <p>Kunci token untuk kepercayaan komunitas. Atur durasi & <i>cliff</i>, bukti on-chain transparan.</p>
+          </article>
+          <article class="feature">
+            <div class="icon"></div>
+            <h3>Liquidity Lock</h3>
+            <p>Kunci LP untuk mencegah rug. Tampilan jadwal unlock & notifikasi.</p>
+          </article>
+          <article class="feature">
+            <div class="icon"></div>
+            <h3>Vesting</h3>
+            <p>Pembagian token untuk tim & investor dengan skema fleksibel dan klaim mandiri.</p>
+          </article>
+          <article class="feature">
+            <div class="icon"></div>
+            <h3>Explorer Verify</h3>
+            <p>Otomasi verifikasi kontrak di explorer Plasma (opsi alternatif bila Sourcify tidak tersedia).</p>
+          </article>
+          <article class="feature">
+            <div class="icon"></div>
+            <h3>Auditable</h3>
+            <p>Jejak transaksi lengkap, <i>export</i> CSV, dan widget bukti untuk ditaruh di situs project.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="solutions" class="section alt">
+      <div class="container">
+        <h2>Solusi untuk Builder</h2>
+        <div class="solutions">
+          <div class="solutions-copy">
+            <ul class="checklist">
+              <li>SDK ringan (JS/TS) untuk integrasi cepat</li>
+              <li>Komponen UI siap pakai (header top + sidebar di App)</li>
+              <li>Multi-account & multi-role (owner, team, auditor)</li>
+              <li>Siap PWA untuk App terpisah</li>
+            </ul>
+            <div class="row gap-sm">
+              <a class="btn outline" href="docs/">Mulai dari Docs</a>
+              <a class="btn ghost" href="#">Roadmap</a>
+            </div>
+          </div>
+          <div class="solutions-card glass">
+            <h4>Struktur Produk</h4>
+            <ol>
+              <li><b>Situs utama (ini):</b> Info produk, SEO, & onboarding.</li>
+              <li><b>Web App:</b> Dashboard dengan <u>sidebar kiri</u> dan <u>header top</u> (network, balance, wallet).</li>
+              <li><b>Docs:</b> Panduan integrasi & API.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container">
+        <h2>Pertanyaan Umum</h2>
+        <details>
+          <summary>Kenapa situs utama dipisah dari Web App?</summary>
+          <p>Untuk fokus: situs utama untuk informasi & SEO; App untuk interaksi on-chain (memerlukan wallet).</p>
+        </details>
+        <details>
+          <summary>Apakah tema warna konsisten dengan Plasma?</summary>
+          <p>Ya: latar putih/hitam dengan aksen hijau plasma. App akan membawa <i>sidebar</i> kiri & header atas (network, balance, wallet).</p>
+        </details>
+        <details>
+          <summary>Apakah ada dukungan verifikasi kontrak otomatis?</summary>
+          <p>Kami siapkan jalur alternatif saat Sourcify tidak tersedia, termasuk integrasi ke explorer Plasma.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container row between top">
+      <div>
+        <div class="row center logo-wrap">
+          <img src="assets/logo.svg" class="logo" alt="Plasmatic logo" width="24" height="24">
+          <strong class="brand">Plasmatic</strong>
+        </div>
+        <p class="muted">© <span id="year"></span> Plasmatic. Semua hak dilindungi.</p>
+      </div>
+      <div class="footer-links">
+        <a href="docs/">Docs</a>
+        <a href="#">Blog</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
