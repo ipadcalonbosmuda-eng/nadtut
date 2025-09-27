@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,8 +27,8 @@
         <span class="badge">Docs</span>
       </div>
       <nav class="nav">
-        <a href="../#features">Fitur</a>
-        <a href="../#solutions">Solusi</a>
+        <a href="../#features">Features</a>
+        <a href="../#solutions">Solutions</a>
         <a href="../#faq">FAQ</a>
         <a href="../">Main Site</a>
       </nav>
@@ -37,15 +37,15 @@
 
   <main class="container content">
     <div class="crumbs">Docs ▸ Getting Started</div>
-    <h1>Plasmatic Docs</h1>
-    <p class="muted">Ini adalah stub dokumentasi. Nanti bisa kamu isi dengan panduan instalasi, API, dan arsitektur.</p>
+    <h1>Plasmatic Documentation</h1>
+    <p class="muted">This is a stub documentation page. You can fill it later with installation guides, API references, and architecture details.</p>
 
     <div class="block">
-      <h2>Instalasi (contoh)</h2>
+      <h2>Installation (example)</h2>
       <pre><code># 1) Install SDK (placeholder)
 npm i @plasmatic/sdk
 
-# 2) Inisialisasi
+# 2) Initialize
 import { TokenFactory } from "@plasmatic/sdk"
 
 const tf = new TokenFactory(provider, signer)
@@ -55,16 +55,16 @@ const tx = await tf.create({
   supply: "1_000_000",
 })
 
-# 3) Verifikasi di explorer (alternatif selain Sourcify)
+# 3) Verify on explorer (alternative if Sourcify is unavailable)
 await tf.verifyOnExplorer(tx.contract)</code></pre>
     </div>
 
     <div class="block" style="margin-top:16px">
-      <h2>Struktur Produk</h2>
+      <h2>Product Structure</h2>
       <ol>
-        <li><b>Main Site:</b> landing & SEO (repo ini).</li>
-        <li><b>Web App:</b> dashboard dengan <i>sidebar</i> kiri dan header top (network, balance, wallet).</li>
-        <li><b>Docs:</b> halaman ini untuk panduan & API.</li>
+        <li><b>Main Site:</b> landing & SEO (this repo).</li>
+        <li><b>Web App:</b> dashboard with <i>left sidebar</i> and top header (network, balance, wallet).</li>
+        <li><b>Docs:</b> this page for guides & API.</li>
       </ol>
     </div>
   </main>
