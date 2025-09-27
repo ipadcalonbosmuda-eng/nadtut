@@ -4,16 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Plasmatic — Plasma Network Tools</title>
-  <meta name="description" content="Plasmatic is the main portal for the Plasma Network ecosystem: token factory, token locker, vesting, and other on-chain tools.">
+  <meta name="description" content="Plasmatic is the main portal for Plasma Network. Use the Web App to deploy tokens, lock tokens & liquidity, manage vesting, and verify contracts — all on Plasma.">
   <meta property="og:title" content="Plasmatic — Plasma Network Tools">
-  <meta property="og:description" content="The single entry point to create & manage tokens on Plasma Network.">
+  <meta property="og:description" content="Deploy, lock, vest, and verify — purpose-built Web App for Plasma Network.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/og-cover.png">
   <meta name="theme-color" content="#00ff85">
   <link rel="icon" href="assets/favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -26,19 +23,17 @@
         <strong class="brand">Plasmatic</strong>
         <span class="badge">Main Site</span>
       </div>
-
       <nav class="nav">
         <a href="#features">Features</a>
         <a href="#solutions">Solutions</a>
-        <a href="docs/" rel="nofollow">Docs</a>
+        <a href="docs/">Docs</a>
         <a href="#faq">FAQ</a>
       </nav>
-
       <div class="row gap-sm">
         <a class="btn ghost" href="#status" id="status-pill">
           <span class="dot dot-ok"></span><span>Status: Normal</span>
         </a>
-        <a class="btn solid" href="https://app.plasmatic.to" target="_blank" rel="noopener">Launch App</a>
+        <a class="btn solid" href="https://app.plasmatic.to" target="_blank" rel="noopener">Launch Web App</a>
       </div>
     </div>
   </header>
@@ -47,35 +42,45 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <h1>Build & manage tokens on <span class="accent">Plasma Network</span></h1>
-          <p class="lede">Plasmatic is the main portal for <b>Token Factory</b>, <b>Token Locker</b>, <b>Liquidity Lock</b>, <b>Vesting</b>, and other on-chain utilities. Lightweight design, ready to link with a separate <i>web app</i>.</p>
+          <h1>Build on <span class="accent">Plasma Network</span> with Confidence</h1>
+          <p class="lede">
+            Plasmatic is the official entry point to Plasma Network.<br>
+            This site provides information and onboarding.  
+            All blockchain actions happen in the <b>Plasmatic Web App</b> — tools to <b>deploy tokens</b>, 
+            <b>lock tokens & liquidity</b>, <b>manage vesting</b>, and <b>verify contracts</b>.
+          </p>
           <div class="cta row">
-            <a class="btn solid lg" href="https://app.plasmatic.to" target="_blank" rel="noopener">Launch App</a>
-            <a class="btn outline lg" href="docs/">Read Docs</a>
+            <a class="btn solid lg" href="https://app.plasmatic.to" target="_blank" rel="noopener">Open Web App</a>
+            <a class="btn outline lg" href="docs/">Read Documentation</a>
           </div>
+          <ul class="ticks">
+            <li>Plasma-only — no multi-chain confusion</li>
+            <li>App UX: top header (network, balance, wallet) + left sidebar</li>
+            <li>Every action is auditable on Plasma explorer</li>
+          </ul>
         </div>
 
         <div class="hero-card glass">
           <div class="card-header row between center">
-            <span class="chip">Preview</span>
+            <span class="chip">Tool Preview</span>
             <span class="pill">Plasma Mainnet</span>
           </div>
           <div class="card-body">
-<pre><code>// Plasmatic SDK (pseudo)
-const tx = await plasmatic.tokenFactory.create({
-  name: "PLAS",
-  symbol: "PLS",
-  supply: "1_000_000",
-  owner: wallet.address
-})
-await plasmatic.verify.onExplorer(tx.contract)</code></pre>
+<pre><code>// Typical flow in Web App:
+// 1) Deploy token
+// 2) Auto-verify contract
+// 3) Lock team tokens
+// 4) Lock liquidity
+// 5) Create vesting
+// 6) Share proof links
+</code></pre>
           </div>
           <div class="card-footer row between center">
             <div class="row center gap-xs">
               <span class="dot dot-ok"></span>
-              <span class="muted">Explorer verification ready</span>
+              <span class="muted">All proofs visible on Plasma Explorer</span>
             </div>
-            <button class="btn ghost sm" disabled>Connect Wallet</button>
+            <button class="btn ghost sm" disabled>Connect Wallet (in App)</button>
           </div>
         </div>
       </div>
@@ -87,28 +92,33 @@ await plasmatic.verify.onExplorer(tx.contract)</code></pre>
         <div class="grid-3">
           <article class="feature">
             <div class="icon"></div>
-            <h3>Create Token</h3>
-            <p>Create a standard token with one click. Metadata, initial supply, and fee routing supported.</p>
+            <h3>Token Deployer</h3>
+            <p>Create Plasma tokens with supply & ownership setup. Verification ready by default.</p>
           </article>
           <article class="feature">
             <div class="icon"></div>
-            <h3>Token Locker</h3>
-            <p>Lock tokens for community trust. Set duration & <i>cliff</i>, fully transparent on-chain proof.</p>
+            <h3>Token Lock</h3>
+            <p>Lock tokens with duration & cliffs. Share proof links directly with your community.</p>
           </article>
           <article class="feature">
             <div class="icon"></div>
             <h3>Liquidity Lock</h3>
-            <p>Lock LP to prevent rug. Unlock schedule & notifications included.</p>
+            <p>Protect LP from rug pulls. Unlock schedules and proof pages are public.</p>
           </article>
           <article class="feature">
             <div class="icon"></div>
-            <h3>Vesting</h3>
-            <p>Distribute tokens to team & investors with flexible schemes and self-claim options.</p>
+            <h3>Vesting Manager</h3>
+            <p>Distribute tokens transparently with self-claim and audit trails.</p>
           </article>
           <article class="feature">
             <div class="icon"></div>
-            <h3>Explorer Verify</h3>
-            <p>Automated contract verification on Plasma explorer.</p>
+            <h3>Explorer Verification</h3>
+            <p>Contracts are prepared for verification on the official Plasma explorer.</p>
+          </article>
+          <article class="feature">
+            <div class="icon"></div>
+            <h3>Auditable by Design</h3>
+            <p>Export CSVs and embed verification widgets. Every action traceable on-chain.</p>
           </article>
         </div>
       </div>
@@ -117,28 +127,12 @@ await plasmatic.verify.onExplorer(tx.contract)</code></pre>
     <section id="solutions" class="section alt">
       <div class="container">
         <h2>Solutions for Builders</h2>
-        <div class="solutions">
-          <div class="solutions-copy">
-            <ul class="checklist">
-              <li>Lightweight SDK (JS/TS) for fast integration</li>
-              <li>Ready-to-use UI components (top header + sidebar in App)</li>
-              <li>Multi-account & multi-role (owner, team, auditor)</li>
-              <li>PWA-ready for the separate App</li>
-            </ul>
-            <div class="row gap-sm">
-              <a class="btn outline" href="docs/">Start with Docs</a>
-              <a class="btn ghost" href="#">Roadmap</a>
-            </div>
-          </div>
-          <div class="solutions-card glass">
-            <h4>Product Structure</h4>
-            <ol>
-              <li><b>Main Site (this):</b> Product info, SEO, onboarding.</li>
-              <li><b>Web App:</b> Dashboard with <u>left sidebar</u> and <u>top header</u> (network, balance, wallet).</li>
-              <li><b>Docs:</b> Integration & API guide.</li>
-            </ol>
-          </div>
-        </div>
+        <ul class="checklist">
+          <li><b>One-stop Web App:</b> Token deployer, token lock, liquidity lock, and vesting in one interface.</li>
+          <li><b>Plasma-Only:</b> No multi-chain modes — optimized purely for Plasma Network.</li>
+          <li><b>Transparent & Auditable:</b> On-chain proofs and public explorer pages.</li>
+          <li><b>Security First:</b> Verification and lock proofs integrated by default.</li>
+        </ul>
       </div>
     </section>
 
@@ -146,16 +140,20 @@ await plasmatic.verify.onExplorer(tx.contract)</code></pre>
       <div class="container">
         <h2>FAQ</h2>
         <details>
-          <summary>Why separate the Main Site from the Web App?</summary>
-          <p>For focus: the main site is for information & SEO; the App is for on-chain interaction (requires wallet).</p>
+          <summary>Where do I deploy and manage tokens?</summary>
+          <p>Inside the <b>Plasmatic Web App</b> at <b>app.plasmatic.to</b>. This site is for information only.</p>
         </details>
         <details>
-          <summary>Are the theme colors consistent with Plasma?</summary>
-          <p>Yes: white/black base with plasma green accents. The App will carry the <i>left sidebar</i> & <i>top header</i> (network, balance, wallet).</p>
+          <summary>Which networks are supported?</summary>
+          <p>Plasmatic is <b>exclusive to Plasma Network</b>. Cross-chain support is not planned.</p>
         </details>
         <details>
-          <summary>Is automated contract verification supported?</summary>
-          <p>We prepare alternative paths when Sourcify is unavailable, including Plasma explorer integration.</p>
+          <summary>Is contract verification automatic?</summary>
+          <p>Yes. Contracts deployed in the Web App are prepared for verification on Plasma explorer.</p>
+        </details>
+        <details>
+          <summary>Can I export reports for audits?</summary>
+          <p>Yes. Export CSV reports and share public proof pages for locks and vesting schedules.</p>
         </details>
       </div>
     </section>
