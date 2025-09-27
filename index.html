@@ -23,18 +23,44 @@
         <strong class="brand">Plasmatic</strong>
         <span class="badge">Main Site</span>
       </div>
-      <nav class="nav">
+
+      <!-- Desktop nav -->
+      <nav class="nav hide-on-mobile">
         <a href="#features">Features</a>
         <a href="#solutions">Solutions</a>
-        <a href="docs/">Docs</a>
+        <a href="docs/" rel="nofollow">Docs</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <div class="row gap-sm">
+
+      <!-- Desktop actions -->
+      <div class="row gap-sm hide-on-mobile">
         <a class="btn ghost" href="#status" id="status-pill">
           <span class="dot dot-ok"></span><span>Status: Normal</span>
         </a>
         <a class="btn solid" href="https://app.plasmatic.to" target="_blank" rel="noopener">Launch Web App</a>
       </div>
+
+      <!-- Mobile: menu button only -->
+      <button id="menuToggle" class="menu-toggle show-on-mobile" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        ☰
+      </button>
+    </div>
+
+    <!-- Offcanvas mobile menu -->
+    <div id="mobileNav" class="mobile-nav" hidden>
+      <div class="mobile-nav__panel" role="dialog" aria-modal="true" aria-labelledby="mobileNavTitle">
+        <div class="mobile-nav__head">
+          <strong id="mobileNavTitle">Menu</strong>
+          <button id="menuClose" class="menu-close" aria-label="Close menu">×</button>
+        </div>
+        <nav class="mobile-nav__links">
+          <a href="#features" data-close>Features</a>
+          <a href="#solutions" data-close>Solutions</a>
+          <a href="docs/" data-close>Docs</a>
+          <a href="#faq" data-close>FAQ</a>
+        </nav>
+      </div>
+      <div class="mobile-nav__backdrop" id="mobileBackdrop" aria-hidden="true"></div>
     </div>
   </header>
 
@@ -50,7 +76,7 @@
             <b>lock tokens & liquidity</b>, <b>manage vesting</b>, and <b>verify contracts</b>.
           </p>
           <div class="cta row">
-            <a class="btn solid lg" href="https://app.plasmatic.to" target="_blank" rel="noopener">Open Web App</a>
+            <a class="btn solid lg hide-on-mobile" href="https://app.plasmatic.to" target="_blank" rel="noopener">Open Web App</a>
             <a class="btn outline lg" href="docs/">Read Documentation</a>
           </div>
           <ul class="ticks">
