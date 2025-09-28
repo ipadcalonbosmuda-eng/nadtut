@@ -38,51 +38,118 @@ body{
 .skip-link:focus{left:16px;top:16px;background:#000;color:#fff;padding:8px 12px;border-radius:8px}
 
 /* ===================
-   Header
+   Header - New Design
 =================== */
-.site-header{
-  position:sticky; top:0; z-index:1000;
-  background:rgba(255,255,255,.95);
-  backdrop-filter:saturate(140%) blur(8px);
-  border-bottom:1px solid #eef1f2;
-  /* make header height 2x smaller */
-  min-height:30px;
-  padding:6px 0;
-  display:flex; align-items:center;
-}
-.site-header .brand{font-weight:800;letter-spacing:.2px;margin-left:12px}
-
-.logo{filter:drop-shadow(0 2px 6px rgba(0,255,133,.16)); width:176px; height:176px; display:block; flex-shrink:0; max-width:120px; max-height:120px; object-fit:contain}
-.brand-link{display:inline-flex;align-items:center; text-decoration:none; min-width:120px}
-
-/* remove old badge spacing if badge removed */
-.logo-wrap .badge{display:none}
-
-/* Header container using grid for proper layout */
-.site-header .container{
-  padding-left:12px;padding-right:12px;
-  display:grid;
-  grid-template-columns: auto 1fr auto;
-  align-items:center;
-  gap:12px;
-  max-width:1152px;
-  margin:auto;
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 255, 133, 0.1);
+  padding: 16px 0;
 }
 
-/* Header sections */
-.header-left{display:flex;align-items:center;justify-content:flex-start}
-.header-right{display:flex;align-items:center;justify-content:flex-end;gap:18px}
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
 
-/* Center navigation */
-.nav{display:flex;align-items:center;justify-content:center}
-.nav a{margin:0 12px;color:#14181b;text-decoration:none;font-weight:600;white-space:nowrap}
-.nav a:hover{color:#000}
+/* Logo Section */
+.logo-section {
+  flex-shrink: 0;
+}
 
-/* make sure logo group stays left and doesn't center on narrow containers */
-.logo-wrap{display:flex;align-items:center;gap:10px}
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
 
-/* align action buttons vertically inside header */
-.site-header .btn{vertical-align:middle}
+.logo-link:hover {
+  transform: scale(1.05);
+}
+
+.logo-img {
+  width: 48px;
+  height: 48px;
+  filter: drop-shadow(0 4px 12px rgba(0, 255, 133, 0.3));
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--plasma);
+  letter-spacing: -0.5px;
+}
+
+/* Navigation */
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-link {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--plasma);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--plasma);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* CTA Section */
+.cta-section {
+  flex-shrink: 0;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, var(--plasma), var(--plasma-2));
+  color: #000;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 255, 133, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 255, 133, 0.4);
+}
 
 /* ===================
    Buttons
