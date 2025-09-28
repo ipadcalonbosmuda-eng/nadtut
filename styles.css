@@ -310,13 +310,6 @@ pre{margin:0;background:#0b0d0f;color:#e6fff3;padding:16px;border-radius:12px;ov
   text-align: left;
 }
 
-.faq-subtitle {
-  font-family: 'PPMori-Regular', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
-  font-size: 1rem;
-  color: #6b7280;
-  margin: 0 0 32px;
-  text-align: left;
-}
 
 .faq-list {
   display: flex;
