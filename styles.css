@@ -68,7 +68,6 @@ body{
 .logo-link {
   display: flex;
   align-items: center;
-  gap: 12px;
   text-decoration: none;
   transition: transform 0.2s ease;
 }
@@ -81,13 +80,6 @@ body{
   width: 48px;
   height: 48px;
   filter: drop-shadow(0 4px 12px rgba(0, 255, 133, 0.3));
-}
-
-.logo-text {
-  font-size: 24px;
-  font-weight: 800;
-  color: var(--plasma);
-  letter-spacing: -0.5px;
 }
 
 /* Navigation */
