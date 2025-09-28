@@ -164,23 +164,44 @@
 
     <section id="faq" class="section">
       <div class="container">
-        <h2>FAQ</h2>
-        <details>
-          <summary>Where do I deploy and manage tokens?</summary>
-          <p>Inside the <b>Plasmatic Web App</b> at <b>app.plasmatic.to</b>. This site is for information only.</p>
-        </details>
-        <details>
-          <summary>Which networks are supported?</summary>
-          <p>Plasmatic is <b>exclusive to Plasma Network</b>. Cross-chain support is not planned.</p>
-        </details>
-        <details>
-          <summary>Is contract verification automatic?</summary>
-          <p>Yes. Contracts deployed in the Web App are prepared for verification on Plasma explorer.</p>
-        </details>
-        <details>
-          <summary>Can I export reports for audits?</summary>
-          <p>Yes. Export CSV reports and share public proof pages for locks and vesting schedules.</p>
-        </details>
+        <div class="faq-layout">
+          <div class="faq-sidebar">
+            <h2>You ask - we answer</h2>
+            <div class="faq-tabs">
+              <button class="faq-tab active" data-tab="general">General</button>
+              <button class="faq-tab" data-tab="network">Network</button>
+              <button class="faq-tab" data-tab="testnet">Testnet</button>
+              <button class="faq-tab" data-tab="developers">Developers</button>
+              <button class="faq-tab" data-tab="xpl">XPL</button>
+              <button class="faq-tab" data-tab="payments">Payments</button>
+              <button class="faq-tab" data-tab="community">Community</button>
+            </div>
+          </div>
+          
+          <div class="faq-content">
+            <div class="faq-tab-content active" id="general">
+              <h3>General</h3>
+              <div class="faq-list">
+                <details>
+                  <summary>Where do I deploy and manage tokens?</summary>
+                  <p>Inside the <b>Plasmatic Web App</b> at <b>app.plasmatic.to</b>. This site is for information only.</p>
+                </details>
+                <details>
+                  <summary>Which networks are supported?</summary>
+                  <p>Plasmatic is <b>exclusive to Plasma Network</b>. Cross-chain support is not planned.</p>
+                </details>
+                <details>
+                  <summary>Is contract verification automatic?</summary>
+                  <p>Yes. Contracts deployed in the Web App are prepared for verification on Plasma explorer.</p>
+                </details>
+                <details>
+                  <summary>Can I export reports for audits?</summary>
+                  <p>Yes. Export CSV reports and share public proof pages for locks and vesting schedules.</p>
+                </details>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
