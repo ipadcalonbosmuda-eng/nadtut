@@ -275,23 +275,6 @@ pre{margin:0;background:#0b0d0f;color:#e6fff3;padding:16px;border-radius:12px;ov
   transform: scaleX(1);
 }
 
-.solution-icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, var(--plasma), var(--plasma-2));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px;
-  color: white;
-  transition: all 0.3s ease;
-}
-
-.solution-card:hover .solution-icon {
-  transform: scale(1.1);
-  box-shadow: 0 8px 24px rgba(0, 255, 133, 0.3);
-}
 
 .solution-card h3 {
   font-family: 'PPMori-SemiBold', 'PPMori-Regular', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
