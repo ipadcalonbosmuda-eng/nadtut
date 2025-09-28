@@ -173,7 +173,7 @@ body{
 }
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px}
 .hero h1{font-size:clamp(32px,4.2vw,56px);line-height:1.1;margin:0 0 10px}
-.accent{background:linear-gradient(90deg,var(--plasma),#45ffd0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.accent{color:#2d3748}
 .lede{font-size:1.1rem;color:#2b3330;max-width:60ch}
 .cta{margin:22px 0}
 
