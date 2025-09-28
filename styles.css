@@ -48,6 +48,8 @@ body{
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 255, 133, 0.1);
   padding: 16px 0;
+  height: 80px;
+  overflow: hidden;
 }
 
 .header-container {
@@ -79,6 +81,8 @@ body{
 .logo-img {
   width: 144px;
   height: 144px;
+  max-height: 48px;
+  object-fit: contain;
   filter: drop-shadow(0 4px 12px rgba(0, 255, 133, 0.3));
 }
 
