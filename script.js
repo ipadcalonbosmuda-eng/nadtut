@@ -19,9 +19,8 @@ if (status){
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileNav = document.getElementById('mobile-nav');
   const mobileNavBackdrop = document.getElementById('mobile-nav-backdrop');
-  const mobileNavClose = document.getElementById('mobile-nav-close');
 
-  console.log('Mobile menu elements:', { mobileMenuBtn, mobileNav, mobileNavBackdrop, mobileNavClose });
+  console.log('Mobile menu elements:', { mobileMenuBtn, mobileNav, mobileNavBackdrop });
 
   function openMobileMenu() {
     console.log('Opening mobile menu');
@@ -67,11 +66,6 @@ if (status){
     console.log('Mobile menu button not found');
   }
 
-  // Close button
-  if (mobileNavClose) {
-    console.log('Adding click event listener to mobile nav close button');
-    mobileNavClose.addEventListener('click', closeMobileMenu);
-  }
 
   // Backdrop click
   if (mobileNavBackdrop) {

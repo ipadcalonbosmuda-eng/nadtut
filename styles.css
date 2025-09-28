@@ -541,32 +541,9 @@ pre{margin:0;background:#0b0d0f;color:#e6fff3;padding:16px;border-radius:12px;ov
 
 .mobile-nav-content {
   padding: 20px;
-  padding-top: 60px; /* Space for close button */
   position: relative;
 }
 
-.mobile-nav-close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  border: none;
-  background: #f3f4f6;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: #6b7280;
-  transition: all 0.2s ease;
-  z-index: 1001;
-}
-
-.mobile-nav-close:hover {
-  background: #e5e7eb;
-  color: #374151;
-}
 
 .mobile-nav-links {
   display: flex;
