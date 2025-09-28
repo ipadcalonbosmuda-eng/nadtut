@@ -18,12 +18,34 @@ if (status){
 (function(){
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileNav = document.getElementById('mobile-nav');
+  const mobileNavBackdrop = document.getElementById('mobile-nav-backdrop');
+  const mobileNavClose = document.getElementById('mobile-nav-close');
 
-  console.log('Mobile menu elements:', { mobileMenuBtn, mobileNav });
+  console.log('Mobile menu elements:', { mobileMenuBtn, mobileNav, mobileNavBackdrop, mobileNavClose });
+
+  function openMobileMenu() {
+    console.log('Opening mobile menu');
+    if (!mobileNav || !mobileNavBackdrop || !mobileMenuBtn) return;
+    
+    mobileNav.classList.add('active');
+    mobileNavBackdrop.classList.add('active');
+    mobileMenuBtn.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobileMenu() {
+    console.log('Closing mobile menu');
+    if (!mobileNav || !mobileNavBackdrop || !mobileMenuBtn) return;
+    
+    mobileNav.classList.remove('active');
+    mobileNavBackdrop.classList.remove('active');
+    mobileMenuBtn.classList.remove('active');
+    document.body.style.overflow = '';
+  }
 
   function toggleMobileMenu() {
     console.log('Toggle mobile menu clicked');
-    if (!mobileMenuBtn || !mobileNav) {
+    if (!mobileNav || !mobileNavBackdrop || !mobileMenuBtn) {
       console.log('Mobile menu elements not found');
       return;
     }
@@ -31,27 +53,10 @@ if (status){
     const isActive = mobileNav.classList.contains('active');
     
     if (isActive) {
-      // Close menu
-      mobileNav.classList.remove('active');
-      mobileMenuBtn.classList.remove('active');
-      document.body.style.overflow = '';
+      closeMobileMenu();
     } else {
-      // Open menu
-      mobileNav.classList.add('active');
-      mobileMenuBtn.classList.add('active');
-      document.body.style.overflow = 'hidden';
-      console.log('Menu opened, classes added:', {
-        mobileNavClasses: mobileNav.className,
-        mobileMenuBtnClasses: mobileMenuBtn.className
-      });
+      openMobileMenu();
     }
-  }
-
-  function closeMobileMenu() {
-    if (!mobileMenuBtn || !mobileNav) return;
-    mobileNav.classList.remove('active');
-    mobileMenuBtn.classList.remove('active');
-    document.body.style.overflow = '';
   }
 
   // Event listeners
@@ -60,6 +65,18 @@ if (status){
     mobileMenuBtn.addEventListener('click', toggleMobileMenu);
   } else {
     console.log('Mobile menu button not found');
+  }
+
+  // Close button
+  if (mobileNavClose) {
+    console.log('Adding click event listener to mobile nav close button');
+    mobileNavClose.addEventListener('click', closeMobileMenu);
+  }
+
+  // Backdrop click
+  if (mobileNavBackdrop) {
+    console.log('Adding click event listener to mobile nav backdrop');
+    mobileNavBackdrop.addEventListener('click', closeMobileMenu);
   }
 
   // Close menu when clicking on nav links
@@ -74,15 +91,6 @@ if (status){
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && mobileNav && mobileNav.classList.contains('active')) {
       closeMobileMenu();
-    }
-  });
-
-  // Close menu when clicking outside
-  document.addEventListener('click', (e) => {
-    if (mobileNav && mobileNav.classList.contains('active')) {
-      if (!mobileNav.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-        closeMobileMenu();
-      }
     }
   });
 })();
