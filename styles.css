@@ -73,8 +73,7 @@ body{
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(15px) saturate(180%);
+  background: #000000;
   border-bottom: 1px solid rgba(32, 0, 83, 0.2);
   padding: 16px 0;
   height: 80px;
@@ -168,7 +167,6 @@ body{
   font-weight: 700;
   font-size: 16px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(90, 0, 160, 0.5), 0 0 20px rgba(125, 0, 204, 0.3);
   border: 1px solid rgba(125, 0, 204, 0.5);
   cursor: pointer;
   font-family: 'PPMori-SemiBold', 'PPMori-Regular', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
@@ -177,7 +175,6 @@ body{
 .cta-button:hover {
   transform: translateY(-2px);
   background: linear-gradient(135deg, var(--accent), var(--monad-light));
-  box-shadow: 0 8px 30px rgba(90, 0, 160, 0.6), 0 0 30px rgba(125, 0, 204, 0.4);
   border-color: rgba(125, 0, 204, 0.8);
 }
 
@@ -741,14 +738,18 @@ pre{margin:0;background:#0b0d0f;color:#e6fff3;padding:16px;border-radius:12px;ov
   .footer-links a {
     margin: 0;
     padding: 8px 12px;
-    background: #f0f4f1;
+    background: rgba(32,0,83,0.3);
+    border: 1px solid rgba(32,0,83,0.5);
     border-radius: 6px;
     font-size: 14px;
+    color: #d0d0e0;
     transition: all 0.2s ease;
   }
   
   .footer-links a:hover {
-    background: #e2ebe5;
+    background: rgba(125,0,204,0.4);
+    border-color: rgba(125,0,204,0.6);
+    color: #ffffff;
     text-decoration: none;
   }
   
