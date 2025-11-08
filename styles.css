@@ -706,6 +706,16 @@ pre{margin:0;background:#0b0d0f;color:#e6fff3;padding:16px;border-radius:12px;ov
   /* Show mobile menu button */
   .mobile-menu-btn{ display:flex; }
   
+  /* Adjust header container padding for mobile */
+  .header-container {
+    padding: 0 12px;
+  }
+  
+  /* Adjust logo position for mobile - align to left edge */
+  .logo-section {
+    margin-left: -4px;
+  }
+  
   /* Adjust logo size for mobile */
   .logo-img {
     width: 120px;
