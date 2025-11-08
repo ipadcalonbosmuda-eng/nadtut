@@ -29,6 +29,7 @@ if (status){
     mobileNav.classList.add('active');
     mobileNavBackdrop.classList.add('active');
     mobileMenuBtn.classList.add('active');
+    document.body.classList.add('menu-open');
     document.body.style.overflow = 'hidden';
   }
 
@@ -39,6 +40,7 @@ if (status){
     mobileNav.classList.remove('active');
     mobileNavBackdrop.classList.remove('active');
     mobileMenuBtn.classList.remove('active');
+    document.body.classList.remove('menu-open');
     document.body.style.overflow = '';
   }
 
