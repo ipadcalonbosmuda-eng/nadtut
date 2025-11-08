@@ -30,6 +30,8 @@ if (status){
     mobileNavBackdrop.classList.add('active');
     mobileMenuBtn.classList.add('active');
     document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
   }
 
   function closeMobileMenu() {
@@ -40,6 +42,8 @@ if (status){
     mobileNavBackdrop.classList.remove('active');
     mobileMenuBtn.classList.remove('active');
     document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.width = '';
   }
 
   function toggleMobileMenu() {
