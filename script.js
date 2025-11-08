@@ -22,15 +22,21 @@ if (status){
 
   console.log('Mobile menu elements:', { mobileMenuBtn, mobileNav, mobileNavBackdrop });
 
+  let scrollPosition = 0;
+
   function openMobileMenu() {
     console.log('Opening mobile menu');
     if (!mobileNav || !mobileNavBackdrop || !mobileMenuBtn) return;
+    
+    // Save current scroll position
+    scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
     
     mobileNav.classList.add('active');
     mobileNavBackdrop.classList.add('active');
     mobileMenuBtn.classList.add('active');
     document.body.style.overflow = 'hidden';
     document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollPosition}px`;
     document.body.style.width = '100%';
   }
 
@@ -43,7 +49,11 @@ if (status){
     mobileMenuBtn.classList.remove('active');
     document.body.style.overflow = '';
     document.body.style.position = '';
+    document.body.style.top = '';
     document.body.style.width = '';
+    
+    // Restore scroll position
+    window.scrollTo(0, scrollPosition);
   }
 
   function toggleMobileMenu() {
